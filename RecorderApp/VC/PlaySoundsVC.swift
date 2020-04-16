@@ -31,7 +31,7 @@ class PlaySoundsVC : UIViewController {
 		
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		print(recordedAudioURL.absoluteString)
+		setupAudio()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -57,8 +57,8 @@ class PlaySoundsVC : UIViewController {
 		  configureUI(.playing)
 	}
 	
-	@IBAction func stopButtonPressed(_ sender: Any) {
-		print("stop button pressed")
+	@IBAction func stopButtonPressed(_ sender: UIButton) {
+		stopAudio()
 	}
 	
 }
