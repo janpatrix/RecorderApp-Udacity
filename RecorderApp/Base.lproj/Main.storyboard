@@ -79,7 +79,6 @@
         <!--Play SoundsVC-->
         <scene sceneID="3Un-nK-9F0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dqU-XE-WW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="cO4-P9-iXo" customClass="PlaySoundsVC" customModule="RecorderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MPg-5L-Y0S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -98,7 +97,7 @@
                                                     <action selector="playSoundForButton:" destination="cO4-P9-iXo" eventType="touchUpInside" id="y3y-Mi-ZDG"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5b-jC-ILu">
+                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5b-jC-ILu">
                                                 <rect key="frame" x="167" y="0.0" width="167" height="240"/>
                                                 <state key="normal" title="Button" image="Fast"/>
                                                 <connections>
@@ -110,14 +109,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7dY-cB-92c">
                                         <rect key="frame" x="0.0" y="240" width="334" height="240"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="js8-dl-QFZ">
+                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="js8-dl-QFZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="240"/>
                                                 <state key="normal" title="Button" image="HighPitch"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="cO4-P9-iXo" eventType="touchUpInside" id="VSP-8A-CTQ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRR-w5-Wqo">
+                                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRR-w5-Wqo">
                                                 <rect key="frame" x="167" y="0.0" width="167" height="240"/>
                                                 <state key="normal" title="Button" image="LowPitch"/>
                                                 <connections>
@@ -129,14 +128,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-RZ-vxQ">
                                         <rect key="frame" x="0.0" y="480" width="334" height="240"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wZ-kj-7xi">
+                                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wZ-kj-7xi">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="240"/>
                                                 <state key="normal" title="Button" image="Echo"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="cO4-P9-iXo" eventType="touchUpInside" id="e41-mD-A5d"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLW-kG-7Kn">
+                                            <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLW-kG-7Kn">
                                                 <rect key="frame" x="167" y="0.0" width="167" height="240"/>
                                                 <state key="normal" title="Button" image="Reverb"/>
                                                 <connections>
@@ -181,6 +180,7 @@
                         <outlet property="stopBtn" destination="okH-fE-NaX" id="ZUX-D1-LGy"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqU-XE-WW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926" y="139"/>
         </scene>
