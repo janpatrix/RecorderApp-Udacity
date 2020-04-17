@@ -19,22 +19,24 @@ class RecordSoundsVC: UIViewController, AVAudioRecorderDelegate {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		stopBtn.isEnabled = false
+		switchButtons(stop: false, record: true)
 	}
 
+	// MARK: When recording has been successfully stopped and saved poerform segue to play screen
 	func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
 		if flag {
 			performSegue(withIdentifier: "recordingSegue", sender: audioRecorder.url)
 		} else {
-			print("recording was not successfull")
+			print("Recording was not successfull")
 		}
 	}
 
-	@IBAction func recordBtnClicked(_ sender: UIButton) {
+	
+	// MARK: Start the Recording
+	@IBAction func startRecording(_ sender: UIButton) {
 		recordLabel.text = "Recording in Progress"
-		stopBtn.isEnabled = true
-		recordBtn.isEnabled = false
-		
+				switchButtons(stop: true, record: false)
+
 		let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
 		let recordingName = "recordedVoice.wav"
 		let pathArray = [dirPath, recordingName]
@@ -50,10 +52,11 @@ class RecordSoundsVC: UIViewController, AVAudioRecorderDelegate {
 		audioRecorder.record()
 	}
 	
-	@IBAction func stopBtnClicked(_ sender: UIButton) {
+	// MARK: Stop the Recording
+	@IBAction func stopRecording(_ sender: UIButton) {
 		recordLabel.text = "Tab to record"
-		stopBtn.isEnabled = false
-		recordBtn.isEnabled = true
+		switchButtons(stop: false, record: true)
+
 		
 		audioRecorder.stop()
 		let audioSession = AVAudioSession.sharedInstance()
@@ -66,6 +69,11 @@ class RecordSoundsVC: UIViewController, AVAudioRecorderDelegate {
 			let recordedSoundURL = sender as! URL
 			playSoundsVC.recordedAudioURL = recordedSoundURL
 		}
+	}
+	
+	func switchButtons(stop: Bool, record: Bool) {
+		stopBtn.isEnabled = stop
+		recordBtn.isEnabled = record
 	}
 }
 

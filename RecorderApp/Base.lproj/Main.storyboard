@@ -26,7 +26,7 @@
                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="Record"/>
                                 <connections>
-                                    <action selector="recordBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k0g-cP-kwg"/>
+                                    <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k0g-cP-kwg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlC-RY-elR" userLabel="recordLabel">
@@ -47,7 +47,7 @@
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="stopBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OKG-fU-KdO"/>
+                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OKG-fU-KdO"/>
                                 </connections>
                             </button>
                         </subviews>
